@@ -1,0 +1,17 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: deploy to webspace
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: copy file via ssh password
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: "webprojects3.fh-hagenberg.at"
+          username: "mediceth"
+          password: ${{ secrets.WEBSPACE_PASSWORD }}
+          source: ./*
+          target: /web
