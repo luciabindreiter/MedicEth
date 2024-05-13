@@ -1,0 +1,145 @@
+:root{
+    --color1: #1E3E59;
+    --color2: #3C5E73;
+    --color3: #5A798C;
+    --color4: #A8BBBF;
+    --color5: #C1D4D9;
+    --color6: #4F4F4F;
+    --color7: #000000;
+}
+@font-face {
+    font-family: raleway;
+    src: url("../fonts/raleway/Raleway-VariableFont_wght.ttf");
+        format('true-type')
+}
+@font-face {
+    font-family: "roboto";
+    src: url("../fonts/roboto/Roboto-Black.ttf");
+        format('true-type')
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    background-color: var(--color2);
+
+}
+header {
+    background-color: var(--color3);
+    max-width: 100%;
+    margin: 10px;
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.LOGO03 {
+    max-width: 50%;
+}
+
+main {
+    background-color: var(--color4);
+    margin: 1%;
+    padding: 1%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color3);
+    max-width: 100%;
+    margin: 10px;
+}
+
+/*-----NAVIGATINOSYTLING-----*/
+nav a::before {
+    content: '';
+    background-image: url("../image/rnricon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 15px;
+}
+.navStylingA {
+    font-family: raleway;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    font-size: 1.5em;
+}
+.navStylingA a {
+    color: var(--color4);
+}
+.navStylingA :hover {
+    background-color: var(--color4);
+    color: var(--color2);
+}
+/*-----NAVIGATIONSTYLING ENDE-----*/
+
+.bgbody {
+    background-image: url("../image/haende.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+/*-----GRID LAYOUT GESTALTUNG-----*/
+.grid-container {
+    font-family: raleway;
+    background-image: url("../image/haende.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 1%;
+    padding: 1%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1% 1%;
+    grid-template-areas:
+    "NEWSLOGO NEWS01 NEWS02"
+    "INTERVIEWS01 INTERVIEWS02 INTERVIEWSLOGO"
+    "REVIEWS01 REVIEWSLOGO REVIEWS02"
+    "NEWSTUFFLOGO NEWSTUFF01 NEWSTUFF02"
+    "HARDFACTS01 HARDFACTS02 HARDFACTSLOGO";
+}
+.NEWSLOGO { grid-area: NEWSLOGO; }
+.INTERVIEWSLOGO { grid-area: INTERVIEWSLOGO; }
+.REVIEWSLOGO { grid-area: REVIEWSLOGO; }
+.NEWSTUFFLOGO { grid-area: NEWSTUFFLOGO; }
+.HARDFACTSLOGO { grid-area: HARDFACTSLOGO; }
+.NEWS01 { grid-area: NEWS01; }
+.NEWS02 { grid-area: NEWS02; }
+.INTERVIEWS01 { grid-area: INTERVIEWS01; }
+.INTERVIEWS02 { grid-area: INTERVIEWS02; }
+.REVIEWS01 { grid-area: REVIEWS01; }
+.REVIEWS02 { grid-area: REVIEWS02; }
+.NEWSTUFF01 { grid-area: NEWSTUFF01; }
+.NEWSTUFF02 { grid-area: NEWSTUFF02; }
+.HARDFACTS01 { grid-area: HARDFACTS01;}
+.HARDFACTS02 { grid-area: HARDFACTS02; }
+
+div[class^="LOGO"], div[class^="NEWS"], div[class^="INTERVIEWS"], div[class^="REVIEWS"], div[class^="NEWSTUFF"], div[class^="HARDFACTS"] {
+    background-color: var(--color4);
+    opacity: 0.5;
+    padding: 20px;
+    border-radius: 8px;
+    /*---GRID LAYOUT GESTALTUNG ENDE---*/
+}
+article{
+    margin:10px;
+}
+@media (min-width: 30em) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr)
+    }
+}
+@media (min-width: 50em) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
