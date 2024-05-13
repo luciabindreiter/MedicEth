@@ -1,11 +1,24 @@
 :root {
-    --color1: #1E3E59;
-    --color2: #3C5E73;
-    --color3: #5A798C;
-    --color4: #A8BBBF;
-    --color5: #C1D4D9;
+    --color1: #2d2d2d;
+    --color2: #626262;
+    --color3: #818181;
+    --color4: #adacac;
+    --color5: #e5e4e4;
 }
-
+body {
+    font-family: "Noto Sans Batak", sans-serif;
+    padding: 20px;
+}
+h1 {
+    color: var(--color1);
+    padding: 20px;
+    font-family: "Playfair Display", serif;
+}
+h2 {
+    font-family: "Playfair Display", serif;
+    color: var(--color2);
+    padding: 20px;
+}
 /* timeline start */
 
 .timeline {
@@ -62,8 +75,8 @@
 .right {
     left: 50%;
 }
-.content {
-    padding: 50px;
+.content h2, p {
+    margin: 20px;
 }
 /* Add arrows to the left container (pointing right) */
 .left::before {
