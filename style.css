@@ -9,419 +9,240 @@
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
 }
-.main-container,
-.main-container * {
+
+/* timeline start */
+
+.timeline {
     box-sizing: border-box;
 }
 
-input,
-select,
-textarea,
-button {
-    outline: 0;
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.main-container {
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
     position: absolute;
-    margin: 0 auto;
-    overflow: hidden;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
 }
-.navbar-background {
+
+/* Container around content */
+.container {
+    padding: 10px 40px;
     position: relative;
-    width: 600px;
-    height: 200px;
-    margin: 57px 0 0 60px;
-    background: var(--color5);
-}
-.info {
-    position: relative;
+    background-color: inherit;
     width: 50%;
-    height: 50%;
-    top: 49px;
-    left: 40px;
-    background: var(--color1);
 }
-.info-1 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+
+/* The circles on the timeline */
+.container::after {
+    content: '';
     position: absolute;
-    height: 61px;
-    top: 20px;
-    left: 90px;
-    color: #ffffff;
-    font-family: Inter, var(--default-font-family);
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 60.511px;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: var(--color4);
+    border: 4px solid var(--color1);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+/* timeline end */
+
+.welcometext-container {
     text-align: left;
-    white-space: nowrap;
+    font-family: Playfair Display, sans-serif;
+    background-color: var(--color4);
+    padding: 25px;
+    margin: 20px;
+    border-radius: 40px;
 }
-.about-us {
-    position: absolute;
-    width: 300px;
-    height: 100px;
-    top: 50px;
-    left: 395px;
-    background: #d9d9d9;
-    z-index: 6;
-}
-.about-us-2 {
+.caption-container {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: 61px;
-    top: 19px;
-    left: 23px;
-    color: #ffffff;
-    font-family: Inter, var(--default-font-family);
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 60.511px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 7;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: var(--color2);
+    padding: 20px;
+    border-radius: 20px;
 }
-.sources {
-    position: absolute;
-    width: 300px;
-    height: 100px;
-    top: 50px;
-    left: 750px;
-    background: #d9d9d9;
-    z-index: 9;
+.caption-container a {
+    color: var(--color5);
+    text-decoration: none;
+    font-size: x-large;
 }
-.quellen {
+.image-container img {
+    height: 300px;
+    object-fit: contain;
+}
+.centered-image {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: 61px;
-    top: 19px;
-    left: 35px;
-    color: #ffffff;
-    font-family: Inter, var(--default-font-family);
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 60.511px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 10;
-}
-.meinungen {
-    position: absolute;
-    width: 300px;
-    height: 100px;
-    top: 50px;
-    left: 1105px;
-    background: #d9d9d9;
-    z-index: 12;
-}
-.hilfe {
-    position: absolute;
-    width: 300px;
-    height: 100px;
-    top: 50px;
-    left: 1460px;
-    background: #d9d9d9;
-    z-index: 15;
-}
-.hilfe-3 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: 61px;
-    top: 19px;
-    left: 81px;
-    color: #ffffff;
-    font-family: Inter, var(--default-font-family);
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 60.511px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 16;
-}
-.meinungen-4 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: 61px;
-    top: 69px;
-    left: 1102px;
-    color: #ffffff;
-    font-family: Inter, var(--default-font-family);
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 60.511px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 13;
-}
-.platz-fur-logo {
-    display: flex;
-    align-items: flex-start;
     justify-content: center;
-    position: relative;
-    width: 844px;
-    height: 121px;
-    margin: 90px 0 0 538px;
-    color: #000000;
-    font-family: Inter, var(--default-font-family);
-    font-size: 100px;
-    font-weight: 400;
-    line-height: 121px;
+    align-items: center;
+    height: 70px;
+    margin: 130px;
+}
+h1 {
+    font-size: xx-large;
+    color: var(--color1);
+    text-align: left;
+}
+body {
+    background-color: var(--color5);
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    background-color: var(--color2);
+    border-radius: 10px;
+    gap: 20px;
+}
+.grid-container h1 {
     text-align: center;
-    white-space: nowrap;
-    z-index: 22;
 }
-.h-euthanasie {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+.grid-item img {
+    width: 100%;
+}
+figure {
     position: relative;
-    width: 790px;
-    height: 121px;
-    margin: 79px 0 0 565px;
-    color: #291515;
-    font-family: Inter, var(--default-font-family);
-    font-size: 100px;
-    font-weight: 400;
-    line-height: 121px;
+    margin: 10px;
+}
+figcaption {
+    font-size: 30px;
+    font-family: Futura, serif;
     text-align: center;
-    white-space: nowrap;
-    z-index: 20;
 }
-.disclaimer {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
-    width: 1800px;
-    height: 455px;
-    margin: 129px 0 0 60px;
-    color: #000000;
-    font-family: Inter, var(--default-font-family);
-    font-size: 75px;
-    font-weight: 400;
-    line-height: 90.767px;
+
+/* start of table settings */
+th {
+    color: var(--color2);
+    text-align: left;
+    font-size: 30px;
+}
+.table {
+    margin: 0 auto;
+}
+table {
+    width: 100%;
+}
+table, th, td, tr {
+    border-bottom: none;
+    padding: 10px;
+}
+table, td {
+    background-color: var(--color4);
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 10px;
+    border-radius: 30px;
+}
+/* end of table settings */
+footer {
+    background-color: var(--color5);
+    font-family: Playfair Display, sans-serif;
+    color: var(--color3);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
     text-align: center;
-    z-index: 21;
 }
-.info-5 {
-    position: relative;
-    width: 300px;
-    height: 100px;
-    margin: 145px 0 0 100px;
-    background: #d9d9d9;
-    z-index: 18;
+@media (min-width: 50em) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .pieces {
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
-.info-6 {
-    position: absolute;
-    width: 119px;
-    height: 61px;
-    top: 19px;
-    left: 90px;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: Inter, var(--default-font-family);
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 60.511px;
-    white-space: nowrap;
-    background: transparent;
-    border: none;
-    z-index: 19;
-}
-.lorem-ipsum {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: relative;
-    width: 1800px;
-    height: 600px;
-    margin: 0 0 0 60px;
-    color: #0d0d0d;
-    font-family: Inter, var(--default-font-family);
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 60.511px;
-    text-align: left;
-    z-index: 23;
-}
-.info-7 {
-    position: relative;
-    width: 300px;
-    height: 100px;
-    margin: 272px 0 0 100px;
-    background: #d9d9d9;
-    z-index: 25;
-}
-.about-us-8 {
-    position: absolute;
-    width: 253px;
-    height: 61px;
-    top: 19px;
-    left: 23px;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: Inter, var(--default-font-family);
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 60.511px;
-    white-space: nowrap;
-    background: transparent;
-    border: none;
-    z-index: 26;
-}
-.info-a {
-    position: relative;
-    width: 300px;
-    height: 100px;
-    margin: 381px 0 0 100px;
-    background: #d9d9d9;
-    z-index: 41;
-}
-.sources-b {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: 61px;
-    top: 19px;
-    left: 35px;
-    color: #ffffff;
-    font-family: Inter, var(--default-font-family);
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 60.511px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 42;
-}
-.sources-c {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: relative;
-    width: 1800px;
-    height: 400px;
-    margin: 20px 0 0 60px;
-    color: #0d0d0d;
-    font-family: Inter, var(--default-font-family);
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 60.511px;
-    text-align: left;
-    z-index: 43;
-}
-.info-d {
-    position: relative;
-    width: 300px;
-    height: 100px;
-    margin: 700px 0 0 100px;
-    background: #d9d9d9;
-    z-index: 29;
-}
-.about-us-e {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: 61px;
-    top: 19px;
-    left: 23px;
-    color: #ffffff;
-    font-family: Inter, var(--default-font-family);
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 60.511px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 30;
-}
-.about-us-f {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: relative;
-    width: 1800px;
-    height: 600px;
-    margin: 0 0 0 60px;
-    color: #0d0d0d;
-    font-family: Inter, var(--default-font-family);
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 60.511px;
-    text-align: left;
-    z-index: 31;
-}
-.info-10 {
-    position: relative;
-    width: 300px;
-    height: 100px;
-    margin: 662px 0 0 100px;
-    background: #d9d9d9;
-    z-index: 37;
-}
-.help {
-    position: absolute;
-    width: 138px;
-    height: 61px;
-    top: 19px;
-    left: 81px;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: Inter, var(--default-font-family);
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 60.511px;
-    white-space: nowrap;
-    background: transparent;
-    border: none;
-    z-index: 38;
-}
-.contact-info {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: relative;
-    width: 1800px;
-    height: 600px;
-    margin: 0 0 0 60px;
-    color: #0d0d0d;
-    font-family: Inter, var(--default-font-family);
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 60.511px;
-    text-align: left;
-    z-index: 39;
-}
-.info-11 {
-    position: relative;
-    width: 300px;
-    height: 100px;
-    margin: 590px 0 0 100px;
-    background: #d9d9d9;
-    z-index: 33;
-}
-.impressum {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: 61px;
-    top: 19px;
-    left: 3px;
-    color: #ffffff;
-    font-family: Inter, var(--default-font-family);
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 60.511px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 34;
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Full-width containers */
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+        left: 15px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
 }
