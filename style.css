@@ -19,6 +19,18 @@ h2 {
     color: var(--color1);
     padding: 20px;
 }
+
+/* disclaimer start */
+
+ul.resource-list {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul.resource-list li {
+    margin-bottom: 15px; /* Erhöht den Abstand zwischen den Listenelementen */
+}
+
 /* timeline start */
 
 .timeline {
