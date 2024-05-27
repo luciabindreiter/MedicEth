@@ -9,6 +9,42 @@ body {
     font-family: "Noto Sans Batak", sans-serif;
     padding: 20px;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo img {
+    height: 130px;
+    width: 130px;
+}
+
+nav {
+    margin-right: 20px; /* Abstand zwischen Navigationsleiste und rechtem Rand */
+}
+
+.caption-container {
+    display: flex;
+}
+
+.caption-container a {
+    color: black;
+    text-decoration: none;
+    font-size: x-large;
+    margin-right: 20px; /* Erhöht den Abstand zwischen den Links */
+    transition: padding-bottom 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.caption-container a:hover {
+    padding-bottom: 6px;
+    border-bottom-color: black;
+    border-bottom-width: 3px;
+}
+
 h1 {
     color: var(--color1);
     padding: 20px;
@@ -293,12 +329,11 @@ input:nth-of-type(7):checked ~ main#carousel {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: var(--color2);
     padding: 20px;
     border-radius: 20px;
 }
 .caption-container a {
-    color: var(--color5);
+    color: var(--color1);
     text-decoration: none;
     font-size: x-large;
 }
@@ -355,6 +390,7 @@ table, td {
     border-radius: 30px;
 }
 /* end of table settings */
+
 footer {
     background-color: var(--color5);
     font-family: Playfair Display, sans-serif;
