@@ -251,6 +251,23 @@ input:nth-of-type(7):checked ~ main#carousel {
 
 /* carousel end */
 
+/* Über uns start */
+.flex {
+    display: flex;
+}
+
+.absatz1,
+.absatz2 {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.absatz1 h3,
+.absatz2 h3 {
+    margin-top: 0;
+}
+
+/* Über uns end */
 
 .welcometext-container {
     text-align: left;
