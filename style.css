@@ -105,34 +105,6 @@ ul.resource-list li {
 .content h2, p {
     margin: 20px;
 }
-/* Add arrows to the left container (pointing right) */
-.left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid var(--color5);
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent var(--color5);
-}
-
-/* Add arrows to the right container (pointing left) */
-.right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid var(--color5);
-    border-width: 10px 10px 10px 0;
-    border-color: transparent var(--color5) transparent transparent;
-}
-
 /* Fix the circle for containers on the right side */
 .right::after {
     left: -16px;
@@ -144,6 +116,9 @@ ul.resource-list li {
     background-color: var(--color5);
     position: relative;
     border-radius: 6px;
+}
+.content:hover {
+    background-color: rgba(217, 4, 121, 0.6);
 }
 
 /* timeline end */
