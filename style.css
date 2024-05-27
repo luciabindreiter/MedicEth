@@ -37,7 +37,7 @@ h2 {
     content: '';
     position: absolute;
     width: 6px;
-    background-color: white;
+    background-color: var(--color4);
     top: 0;
     bottom: 0;
     left: 50%;
@@ -89,9 +89,9 @@ h2 {
     width: 0;
     z-index: 1;
     right: 30px;
-    border: medium solid white;
+    border: medium solid var(--color5);
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
+    border-color: transparent transparent transparent var(--color5);
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -103,9 +103,9 @@ h2 {
     width: 0;
     z-index: 1;
     left: 30px;
-    border: medium solid white;
+    border: medium solid var(--color5);
     border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+    border-color: transparent var(--color5) transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -116,7 +116,7 @@ h2 {
 /* The actual content */
 .content {
     padding: 20px 30px;
-    background-color: white;
+    background-color: var(--color5);
     position: relative;
     border-radius: 6px;
 }
@@ -168,7 +168,7 @@ div.item {
 
 div.item:nth-of-type(1) {
     --offset: 1;
-    background-color: white;
+    background-color: var(--color5);
 }
 div.item:nth-of-type(2) {
     --offset: 2;
@@ -176,7 +176,7 @@ div.item:nth-of-type(2) {
 }
 div.item:nth-of-type(3) {
     --offset: 3;
-    background-color: white;
+    background-color: var(--color5);
 }
 div.item:nth-of-type(4) {
     --offset: 4;
@@ -184,7 +184,7 @@ div.item:nth-of-type(4) {
 }
 div.item:nth-of-type(5) {
     --offset: 5;
-    background-color: white;
+    background-color: var(--color5);
 }
 div.item:nth-of-type(6) {
     --offset: 6;
@@ -192,7 +192,7 @@ div.item:nth-of-type(6) {
 }
 div.item:nth-of-type(7) {
     --offset: 7;
-    background-color: white;
+    background-color: var(--color5);
 }
 
 input:nth-of-type(1) {
@@ -305,9 +305,6 @@ h1 {
     font-size: xx-large;
     color: var(--color1);
     text-align: left;
-}
-body {
-    background-color: var(--color5);
 }
 .grid-container {
     display: grid;
