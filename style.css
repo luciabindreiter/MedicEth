@@ -16,7 +16,7 @@ h1 {
 }
 h2 {
     font-family: "Playfair Display", serif;
-    color: var(--color2);
+    color: var(--color1);
     padding: 20px;
 }
 /* timeline start */
@@ -130,14 +130,14 @@ h2 {
     margin: 0;
     display: grid;
     grid-template-rows: 500px 100px;
-    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+    grid-template-columns: 1fr 30px 30px 30px 30px 30px 30px 30px 1fr; /* Zwei zusätzliche Spalten hinzugefügt */
     align-items: center;
     justify-items: center;
 }
 
 main#carousel {
     grid-row: 1 / 2;
-    grid-column: 1 / 8;
+    grid-column: 1 / 10; /* Die Grid-Spalten auf 10 erweitern */
     width: 100vw;
     height: 500px;
     display: flex;
@@ -146,8 +146,8 @@ main#carousel {
     overflow: hidden;
     transform-style: preserve-3d;
     perspective: 600px;
-    --items: 5;
-    --middle: 3;
+    --items: 7; /* Anzahl der Elemente */
+    --middle: 4; /* Mittleres Element */
     --position: 1;
     pointer-events: none;
 }
@@ -160,11 +160,11 @@ div.item {
     --r: calc(var(--position) - var(--offset));
     --abs: max(calc(var(--r) * -1), var(--r));
     transition: all 0.25s linear;
-    transform: rotateY(calc(-10deg * var(--r)))
-    translateX(calc(-300px * var(--r)));
+    transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-300px * var(--r)));
     z-index: calc((var(--position) - var(--abs)));
     padding: 30px;
 }
+
 
 div.item:nth-of-type(1) {
     --offset: 1;
@@ -184,6 +184,14 @@ div.item:nth-of-type(4) {
 }
 div.item:nth-of-type(5) {
     --offset: 5;
+    background-color: white;
+}
+div.item:nth-of-type(6) {
+    --offset: 6;
+    background-color: var(--color4);
+}
+div.item:nth-of-type(7) {
+    --offset: 7;
     background-color: white;
 }
 
@@ -225,6 +233,20 @@ input:nth-of-type(5) {
 }
 input:nth-of-type(5):checked ~ main#carousel {
     --position: 5;
+}
+input:nth-of-type(6) {
+    grid-column: 7 / 8;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(6):checked ~ main#carousel {
+    --position: 6;
+}
+input:nth-of-type(7) {
+    grid-column: 8 / 9;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(7):checked ~ main#carousel {
+    --position: 7;
 }
 
 /* carousel end */
