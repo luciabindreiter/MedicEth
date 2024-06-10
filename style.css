@@ -14,7 +14,17 @@ body {
     font-family: "Noto Sans Batak", sans-serif;
     padding: 20px;
 }
-
+#disclaimer {
+    padding: 20px;
+}
+#close {
+    background-color: var(--color7);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    font-size: large;
+    font-family: "Playfair Display", serif;
+}
 header {
     display: flex;
     justify-content: space-between;
@@ -23,8 +33,11 @@ header {
 }
 
 .logo img {
-    height: 130px;
-    width: 130px;
+    height: 200px;
+}
+
+.logo img:hover {
+    content: url("logo/Logo-color-text.png");
 }
 
 nav {
@@ -68,8 +81,6 @@ h2 {
     color: var(--color1);
     padding: 20px;
 }
-
-/* disclaimer start */
 
 ul.resource-list {
     list-style-type: disc;
@@ -155,6 +166,7 @@ ul.resource-list li {
 }
 .content:hover {
     background-color: rgba(217, 4, 121, 0.6);
+    transition: all .6s ease;
 }
 
 /* timeline end */
@@ -387,6 +399,25 @@ footer {
     margin: 10px;
     border-radius: 10px;
     text-align: center;
+}
+/*the fade animations*/
+
+@keyframes fade-out {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
 }
 @media (min-width: 50em) {
     .grid-container {
