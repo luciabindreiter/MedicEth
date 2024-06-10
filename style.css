@@ -37,7 +37,7 @@ header {
 }
 
 .logo img:hover {
-    content: url("logo/Logo-color-text.png");
+    content: url("logo/Logo-2.png");
 }
 
 nav {
@@ -65,7 +65,6 @@ nav {
 
 a {
     color: black;
-    text-decoration: none;
 }
 a:hover {
     color: var(--color9);
