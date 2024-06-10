@@ -98,6 +98,8 @@ ul.resource-list li {
 
 /* The actual timeline (the vertical ruler) */
 .timeline {
+    background-image: url("pics/trees.jpg");
+    blur: 100%;
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
@@ -186,12 +188,18 @@ ul.resource-list li {
     align-items: center;
     justify-items: center;
 }
+
 .image01 {
+
+}
+
+.image02 {
     display: flex;
+    max-height: 60%;
     justify-content: center;
     align-items: center;
-    height: 10%;
-    border-radius: 30px;
+    height: 50%;
+
 }
 
 main#carousel {
