@@ -91,6 +91,11 @@ ul.resource-list li {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
+    background-image: url("../pics/trees.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 /* The actual timeline (the vertical ruler) */
