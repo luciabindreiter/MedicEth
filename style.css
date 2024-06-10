@@ -171,7 +171,7 @@ ul.resource-list li {
     border-radius: 6px;
 }
 .content:hover {
-    background-color: rgba(217, 4, 121, 0.6);
+    background-color: rgba(217, 4, 121, 0.8);
     transition: all .6s ease;
 }
 
