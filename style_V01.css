@@ -101,6 +101,7 @@ ul.resource-list li {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
+    background-image: url("../pics/trees.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -185,12 +186,7 @@ ul.resource-list li {
     grid-template-columns: 1fr 30px 30px 30px 30px 30px 30px 30px 1fr; /* Zwei zusätzliche Spalten hinzugefügt */
     align-items: center;
     justify-items: center;
-}
-.image01 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10%;
+    background-image: url("../pics/bee.jpg");
     border-radius: 30px;
 }
 
