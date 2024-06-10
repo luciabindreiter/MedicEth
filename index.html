@@ -7,16 +7,16 @@
 </head>
 <header>
     <div class="logo">
-        <img src="logo/Logo-black_white-PNG.png" height="538" width="464"/>
+        <img src="logo/Logo-1.png"/>
     </div>
     <nav>
         <div class="caption-container">
-            <a href="#disclaimer">Disclaimer</a>
+            <a href="#disclaimer" id="navDisclaimer">Disclaimer</a>
             <a href="#information">Informationen</a>
             <a href="#opinions">Meinungen</a>
+            <a href ="#help">Hilfe</a>
             <a href="#sources">Quellen</a>
-            <a href="#aboutus">Über Uns</a>
-            <a href ="#help">Hilfe</a> <!--links-->
+            <a href="#aboutus">Über Uns</a> <!--links-->
         </div>
     </nav>
 </header>
@@ -28,7 +28,7 @@
                 Die Informationen auf dieser Website dienen ausschließlich zu Bildungs- und Informationszwecken. Sie stellen keine medizinische, rechtliche oder sonstige professionelle Beratung dar. Euthanasie und assistierter Suizid sind komplexe und sensible Themen, die rechtliche, ethische und persönliche Aspekte umfassen. Es ist wichtig, professionelle Beratung von qualifizierten Fachleuten in Anspruch zu nehmen, bevor Entscheidungen getroffen werden.
             </p>
             <p>
-                Die auf dieser Website bereitgestellten Informationen sind auf dem Stand vom <strong>Mai 2024</strong>. Wir übernehmen keine Haftung für die Aktualität, Vollständigkeit oder Richtigkeit der bereitgestellten Informationen.
+                Die auf dieser Website bereitgestellten Informationen sind auf dem Stand von <strong>Juni 2024</strong>. Wir übernehmen keine Haftung für die Aktualität, Vollständigkeit oder Richtigkeit der bereitgestellten Informationen.
             </p>
             <p>
                 Wenn Sie oder jemand, den Sie kennen, über Euthanasie oder assistierten Suizid nachdenkt, suchen Sie bitte umgehend Hilfe. Auf unserer Website finden Sie unter <a href ="#help">Hilfe</a> einige Ressourcen dafür.
@@ -37,6 +37,7 @@
                 Denken Sie daran, dass es immer Menschen und Organisationen gibt, die Ihnen helfen können. Zögern Sie nicht, Hilfe zu suchen.
             </p>
     </article>
+    <button id="close" onclick="fade()">Disclaimer ausblenden</button>
     <article id="information">
         <h1>Informationen</h1>
         <div class="timeline">
@@ -137,6 +138,35 @@
         </div>
         <main>
     </section>
+    <h1 id="help">Hilfsangebote für Betroffene</h1>
+    <article>
+        <ul class="resource-list">
+            <li>
+                <a href="https://www.telefonseelsorge.de"><strong>Telefonseelsorge:</strong> Rund um die Uhr erreichbar unter 142. Die Beratung ist anonym und kostenlos.</a>
+            </li>
+            <li>
+                <a href="https://www.rataufdraht.at"><strong>Rat auf Draht</strong>: Für Kinder, Jugendliche und deren Bezugspersonen, erreichbar unter 147</a>
+            </li>
+            <li>
+                <a href="https://suizidpraevention.at"><strong>Österreichische Gesellschaft für Suizidprävention (ÖGS):</strong> Bietet Informationen und Unterstützung zur Suizidprävention</a>
+            </li>
+            <li>
+                <a href="http://www.suizidprophylaxe.de/hilfsangebote/hilfsangebote/"><strong>Suizidprophylaxe</strong></a>
+            </li>
+            <li>
+                <a href="https://www.hilfswerk.at/oesterreich/"><strong>Hilfswerk Österreich:</strong> Bietet Beratung und Unterstützung in Krisensituationen</a>
+            </li>
+            <li>
+                <a href="https://www.maennerinfo.at"><strong>Männerinfo:</strong> Tel.: 0800 400 777, rund um die Uhr</a>
+            </li>
+            <li>
+                <a href="https://www.roteskreuz.at/home"><strong>Ö3 Rotes Kreuz Kummernummer:</strong> Tel.: 116 123, täglich von 16 bis 24 Uhr</a>
+            </li>
+            <li>
+                <a href="https://www.gesundheit.gv.at/leben/suizidpraevention/betroffene/krisentelefonnummern.html"><strong>Hier finden Sie noch mehr Telefonnummern</strong></a>
+            </li>
+        </ul>
+    </article>
     <article class="table">
         <h1 id="sources">Quellen</h1> <!--table header (on top of table)-->
         <table>
@@ -238,7 +268,8 @@
             <section class="absatz2">
                 <h2>Wer sind wir?</h2>
                 <p>
-                    Wir verstehen die Sensibilität und Komplexität von Fragen rund um das Ende des Lebens und die
+                    Wir, Anna Adamenko, Hannah Doci, Lucia Bindreiter und Tobias Mayr, sind 4 Studierende der FH Oberösterreich Campus Hagenberg und haben diese Website im Zuge einer Lehrveranstaltung (Agiles IT-Projektmanagement) ins Leben gerufen.
+                    <br>Wir verstehen die Sensibilität und Komplexität von Fragen rund um das Ende des Lebens und die
                     Entscheidungen,
                     die damit verbunden sind.
 
@@ -255,35 +286,6 @@
                 </p>
             </section>
         </div>
-    </article>
-    <h1 id="help">Hilfsangebote für Betroffene</h1>
-    <article>
-        <ul class="resource-list">
-        <li>
-            <a href="https://www.telefonseelsorge.de"><strong>Telefonseelsorge:</strong> Rund um die Uhr erreichbar unter 142. Die Beratung ist anonym und kostenlos.</a>
-        </li>
-        <li>
-            <a href="https://www.rataufdraht.at"><strong>Rat auf Draht</strong>: Für Kinder, Jugendliche und deren Bezugspersonen, erreichbar unter 147</a>
-        </li>
-        <li>
-            <a href="https://suizidpraevention.at"><strong>Österreichische Gesellschaft für Suizidprävention (ÖGS):</strong> Bietet Informationen und Unterstützung zur Suizidprävention</a>
-        </li>
-        <li>
-            <a href="http://www.suizidprophylaxe.de/hilfsangebote/hilfsangebote/"><strong>Suizidprophylaxe</strong></a>
-        </li>
-        <li>
-            <a href="https://www.hilfswerk.at/oesterreich/"><strong>Hilfswerk Österreich:</strong> Bietet Beratung und Unterstützung in Krisensituationen</a>
-        </li>
-        <li>
-            <a href="https://www.maennerinfo.at"><strong>Männerinfo:</strong> Tel.: 0800 400 777, rund um die Uhr</a>
-        </li>
-        <li>
-            <a href="https://www.roteskreuz.at/home"><strong>Ö3 Rotes Kreuz Kummernummer:</strong> Tel.: 116 123, täglich von 16 bis 24 Uhr</a>
-        </li>
-        <li>
-            <a href="https://www.gesundheit.gv.at/leben/suizidpraevention/betroffene/krisentelefonnummern.html"><strong>Hier finden Sie noch mehr Telefonnummern</strong></a>
-        </li>
-        </ul>
     </article>
 </main>
 <footer>
@@ -309,6 +311,7 @@
     <br>
 
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
 
