@@ -106,6 +106,7 @@ ul.resource-list li {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    border-radius: 30px;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -185,6 +186,8 @@ ul.resource-list li {
     grid-template-columns: 1fr 30px 30px 30px 30px 30px 30px 30px 1fr; /* Zwei zusätzliche Spalten hinzugefügt */
     align-items: center;
     justify-items: center;
+    background-image: url("../pics/bee.jpg");
+    border-radius: 30px;
 }
 
 main#carousel {
