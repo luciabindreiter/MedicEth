@@ -140,6 +140,10 @@ ul.resource-list li {
     z-index: 2;
 }
 
+#information {
+    position:relative;
+}
+
 /* The circles on the timeline */
 .container::after {
     content: '';
