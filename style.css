@@ -104,7 +104,10 @@ ul.resource-list li {
 /* The actual timeline (the vertical ruler) */
 .timeline {
     background-image: url("pics/trees.jpg");
+<<<<<<< HEAD
     opacity: 95%;
+=======
+>>>>>>> 98f0e0434c9a9e47e97d24b3c1360574d65bd183
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
@@ -431,13 +434,13 @@ footer {
         opacity: 100%;
     }
     to {
-        opacity: 0%;
+        opacity: 0;
     }
 }
 
 @keyframes fade-in {
     from {
-        opacity: 0%;
+        opacity: 0;
     }
     to {
         opacity: 100%;
@@ -469,7 +472,6 @@ footer {
     /* Make sure that all arrows are pointing leftwards */
     .container::before {
         left: 60px;
-        border: medium solid white;
         border-width: 10px 10px 10px 0;
         border-color: transparent white transparent transparent;
     }
@@ -481,6 +483,6 @@ footer {
 
     /* Make all right containers behave like the left ones */
     .right {
-        left: 0%;
+        left: 0;
     }
 }
