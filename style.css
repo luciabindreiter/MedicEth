@@ -81,6 +81,11 @@ h2 {
     padding: 20px;
 }
 
+.content:hover h2{
+    color: var(--color5);
+    transition: all .6s ease;
+}
+
 ul.resource-list {
     list-style-type: disc;
     margin-left: 20px;
@@ -99,7 +104,7 @@ ul.resource-list li {
 /* The actual timeline (the vertical ruler) */
 .timeline {
     background-image: url("pics/trees.jpg");
-    blur: 100%;
+    opacity: 95%;
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
@@ -173,6 +178,7 @@ ul.resource-list li {
 .content:hover {
     background-color: rgba(217, 4, 121, 0.8);
     transition: all .6s ease;
+    color: white;
 }
 
 /* timeline end */
@@ -194,12 +200,11 @@ ul.resource-list li {
 }
 
 .image02 {
-    display: flex;
-    max-height: 60%;
-    justify-content: center;
-    align-items: center;
-    height: 50%;
-
+    background: url("pics/bee01.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 15rem;
+    border-radius: 30px;
 }
 
 main#carousel {
